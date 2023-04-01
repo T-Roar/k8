@@ -1,0 +1,13 @@
+apiVersion: skaffold/v4beta4
+kind: Config
+metadata:
+  name: k-
+build:
+  artifacts:
+    - image: dennar/node
+      buildpacks:
+        builder: gcr.io/buildpacks/builder:v1
+manifests:
+  rawYaml:
+    - deployment.yaml
+    - service.yaml
